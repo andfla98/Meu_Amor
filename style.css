@@ -1,0 +1,400 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('assets/background.jpg'); /* Opcional: imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos da Carta */
+.letter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    background-image: url('assets/background.jpg'); /* Opcional: imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.letter {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 600px;
+}
+
+.letter-title {
+    font-family: 'Dancing Script', cursive;
+    color: #e91e63;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.letter-body {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#open-letter-button {
+    padding: 15px 30px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#open-letter-button:hover {
+    background-color: #c2185b;
+    box-shadow: 0 2px 5px rgba(233, 30, 99, 0.5);
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.1s forwards; /* Adicionando animação */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #eee;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #e91e63;
+    margin-bottom: 10px;
+    font-size: 3em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+section {
+    margin-top: 40px;
+}
+
+section h2 {
+    color: #e91e63;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    font-size: 2em;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+#fotos .gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+#fotos .gallery img {
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#fotos .gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 640px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+}
+
+.slide img {
+    width: 300px; /* Define a largura fixa */
+    height: 500px; /* Define a altura fixa */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 8px; /* Opcional: bordas arredondadas */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* The dots/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+#declaracao {
+    text-align: center;
+    font-size: 1.4em;
+    color: #555;
+    font-style: italic;
+    padding: 20px;
+    background-color: rgba(255, 230, 236, 0.3);
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #eee;
+    color: #777;
+    font-size: 0.9em;
+    transition: border-top 0.3s ease, color 0.3s ease;
+}
+
+#verMaisFotos {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#verMaisFotos:hover {
+    background-color: #c2185b;
+    box-shadow: 0 2px 5px rgba(233, 30, 99, 0.5);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 12px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    transform: rotate(90deg);
+}
+
+.modal-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-gallery img {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heart {
+    font-size: 2em;
+    color: #e91e63;
+    animation: pulse 1.5s infinite alternate;
+}
+
+/* Botões de tema */
+.theme-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.theme-buttons button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme {
+    background-color: #333;
+    color: #f8f8f8;
+    background-image: none;
+}
+
+body.dark-theme .container {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-theme header h1 {
+    color: #ff4081;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme section h2 {
+    color: #ff4081;
+    border-bottom: 2px solid #555;
+}
+
+body.dark-theme #declaracao {
+    background-color: rgba(66, 66, 66, 0.5);
+    color: #ddd;
+}
+
+body.dark-theme footer {
+    color: #bbb;
+    border-top: 2px solid #555;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    #fotos .gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #fotos .gallery img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .theme-buttons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .theme-buttons button {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+    }
+}

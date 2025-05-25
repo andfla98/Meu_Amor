@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para a Mulher da Minha Vida</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="letter-container">
+        <div class="letter">
+            <h2 class="letter-title">Para o Amor da Minha Vida</h2>
+            <p class="letter-body">Meu amor, preparei algo especial para você. Clique no botão abaixo para abrir e descobrir a surpresa que preparei com todo o meu carinho.</p>
+            <button id="open-letter-button">Abrir Carta</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="animate__animated animate__fadeInDown">
+            <h1>Para a Mulher da Minha Vida</h1>
+            <p>Um presente do meu coração, feito com todo o meu amor.</p>
+        </header>
+
+        <section id="fotos" class="animate__animated animate__fadeInUp">
+            <h2>Nossa História em Imagens</h2>
+            <div class="gallery">
+                <img src="assets/img1.jpg" alt="Nossa primeira foto">
+                <img src="assets/img2.jpg" alt="Nossa primeira viagem">
+                <img src="assets/img3.jpg" alt="Um momento especial">
+            </div>
+            <button id="verMaisFotos">Ver Mais Fotos</button>
+        </section>
+
+        <section id="slideshow" class="animate__animated animate__fadeIn">
+            <h2>Nossos Melhores Momentos</h2>
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="assets/img4.jpg" alt="Nossa foto especial">
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/img5.jpg" alt="Outro momento especial">
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/img6.jpg" alt="Mais um momento especial">
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/img7.jpg" alt="Recordações incríveis">
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/img8.jpg" alt="Momentos inesquecíveis">
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/img9.jpg" alt="Nossa alegria">
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/img10.jpg" alt="Nosso amor">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+            </div>
+        </section>
+
+        <section id="declaracao" class="animate__animated animate__pulse animate__infinite">
+            <h2>Minha Declaração de Amor</h2>
+            <p>Quero expressar meus sentimentos me Desculpa por nao demostra tanto o meu amor por você, nao posso ficar guardando o que sinto por voce  é algo que tenho que demostrar é importante para nosso relacionamento, estou vendo que esta te machucando nao posso mais ver 3 nao fazer nada só piorar, me desculpa meu amor, você é a dona do meu coração.
+            preciso fazer algo se nao como vou te mostrar meu amor  por voce.</p>
+        </section>
+
+        <footer>
+            <p>Com todo o meu amor, seu eterno apaixonado.</p>
+            <div class="heart">❤️</div>
+        </footer>
+
+        <audio id="musica" src="assets/nossa_musica.mp3" autoplay loop></audio>
+    </div>
+
+    <div id="modalFotos" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div class="modal-gallery">
+                <img src="assets/img1.jpg" alt="Nossa primeira foto">
+                <img src="assets/img2.jpg" alt="Nossa primeira viagem">
+                <img src="assets/img3.jpg" alt="Um momento especial">
+                <!-- Adicione mais fotos aqui -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de tema -->
+    <div class="theme-buttons">
+        <button id="light-mode">☀️</button>
+        <button id="dark-mode">🌙</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
